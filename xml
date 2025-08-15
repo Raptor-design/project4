@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{YOUR-GUID-HERE}</ProjectGuid>
+    <MainSource>SimpleWebApp.dpr</MainSource>
+    <Config Condition="'$(Config)'==''">Debug</Config>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Config)'=='Debug'">
+    <Platform Condition="'$(Platform)'==''">Win32</Platform>
+    <TargetedPlatforms>1</TargetedPlatforms>
+    <DCC_DCCCompiler>DCC</DCC_DCCCompiler>
+    <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Winapi;System.Win</DCC_Namespace>
+    <DCC_UsePackage>1</DCC_UsePackage>
+    <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+    <DCC_Output>.\$(Platform)\$(Config)</DCC_Output>
+    <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+    <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
+    <DCC_E>1</DCC_E>
+    <DCC_N>1</DCC_N>
+    <DCC_S>1</DCC_S>
+    <DCC_F>1</DCC_F>
+    <DCC_K>1</DCC_K>
+    <DCC_C>1</DCC_C>
+    <DCC_H>1</DCC_H>
+    <DCC_Q>1</DCC_Q>
+    <DCC_R>1</DCC_R>
+    <DCC_D>1</DCC_D>
+    <DCC_L>1</DCC_L>
+    <DCC_U>1</DCC_U>
+    <DCC_A>1</DCC_A>
+    <DCC_B>1</DCC_B>
+    <DCC_T>1</DCC_T>
+    <DCC_V>1</DCC_V>
+    <DCC_JU>1</DCC_JU>
+    <DCC_IL>1</DCC_IL>
+  </PropertyGroup>
+  <ItemGroup>
+    <DelphiCompile Include="WebModuleUnit.pas">
+      <MainForm>1</MainForm>
+    </DelphiCompile>
+    <DelphiCompile Include="SimpleWebApp.dpr"/>
+  </ItemGroup>
+  <ItemGroup>
+    <BuildConfiguration Include="Debug">
+      <Key>Debug</Key>
+    </BuildConfiguration>
+    <BuildConfiguration Include="Release">
+      <Key>Release</Key>
+    </BuildConfiguration>
+  </ItemGroup>
+</Project>
